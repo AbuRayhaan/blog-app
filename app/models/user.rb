@@ -3,6 +3,9 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: 'author_id'
   has_many :likes, foreign_key: 'author_id'
 
+  validates :name, presence: true
+  validates :post_counter, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 0 }
+
   # method that returns the 3 most recent posts for a given user
 
   def recent_post
