@@ -37,8 +37,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_12_181341) do
     t.integer "author_id"
     t.string "title"
     t.text "text"
-    t.integer "comment_counter", default: 0
-    t.integer "likes_counter", default: 0
+    t.integer "comment_counter"
+    t.integer "likes_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_posts_on_author_id"
@@ -48,7 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_12_181341) do
     t.string "name"
     t.text "bio"
     t.string "photo"
-    t.integer "post_counter", default: 0
+    t.integer "post_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
