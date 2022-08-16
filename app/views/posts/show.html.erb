@@ -1,0 +1,12 @@
+<div class="post_show">
+    <div class="post">
+        <p><%= @post.title %></p>
+        <p><%= @post.comment_counter %></p>
+    </div>
+    <p><%= @post.text %></p>
+    <div class="comments">
+        <% @post.comments.each do |comment| %>
+            <p><%= comment.text %> By: <%= comment.user.name %></p>
+        <% end %>
+    </div>
+</div>
