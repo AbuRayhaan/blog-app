@@ -1,44 +1,44 @@
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .user_container {
-    flex-direction: column;
-    gap: 15px;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .d_flex {
-    display: flex;
+  display: flex;
 }
 
 .user_details,
 .user_header {
-    gap: 15px;
+  gap: 15px;
 }
 
 .user_img {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 .show_container,
 .post_container {
-    flex-direction: column;
-    gap: 15px;
-    padding: 5px, 20px;
+  flex-direction: column;
+  gap: 15px;
+  padding: 5px 20px;
 }
 
 .user_info {
-    gap: 35px;
-    border: 1px solid black;
-    padding: 5px 40px;
-    align-items:flex-end;
+  gap: 35px;
+  border: 1px solid black;
+  padding: 5px 40px;
+  align-items: flex-end;
 }
 
 .user_bio,
 .user_post,
 .post_details,
 .post_show {
-    border: 1px solid black;
-    width: 29.4%;
-    padding-left: 20px;
+  border: 1px solid black;
+  width: 29.4%;
+  padding-left: 20px;
 }
