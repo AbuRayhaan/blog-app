@@ -1,1 +1,12 @@
 <h1>User Index Page</h1>
+<div>
+  <% @users.each do |i|%>
+    <div class="user_details">
+      <%= image_tag i.photo, size: "160x90", alt: "Profile Picture"%>
+      <div>
+        <h1><%= link_to i.name, i %></h1>
+        <p>Number of posts: <%= i.post_counter %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
