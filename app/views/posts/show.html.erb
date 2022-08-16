@@ -1,1 +1,14 @@
-<h1>User Show Page</h1>
+<h1>Post Show Page</h1>
+
+<div class="post_show">
+    <div class="post">
+        <p><%= @post.title %></p>
+        <small><%= @post.comments_count %></p>
+    </div>
+    <p><%= @post.text %></p>
+    <div class="comments">
+        <% @post.comments.each do |comment| %>
+            <p><%= comment.text %> By: <%= comment.user.name %></p>
+        <% end %>
+    </div>
+</div>
