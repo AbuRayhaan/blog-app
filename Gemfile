@@ -76,3 +76,5 @@ group :development, :test do
 end
 
 gem 'ffi'
+
+gem 'rails-controller-testing'
