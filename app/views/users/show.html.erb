@@ -1,8 +1,7 @@
-<h1>User Show Page</h1>
-<div>
-  <section class="user_header">
-    <%= image_tag @user.photo, size: "160x90", alt: "Profile Picture"%>
-    <div>
+<div class="show_container d_flex">
+  <section class="user_header d_flex">
+    <%= image_tag @user.photo, class: "user_img", size: "160x90", alt: "Profile Picture"%>
+    <div class=" user_info d_flex">
       <h1><%= link_to @user.name %></h1>
       <p>Number of posts: <%= @user.post_counter %></p>
     </div>

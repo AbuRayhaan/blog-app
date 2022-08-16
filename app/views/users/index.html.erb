@@ -1,9 +1,9 @@
-<h1>User Index Page</h1>
-<div>
+
+<div class="user_container d_flex">
   <% @users.each do |i|%>
-    <div class="user_details">
-      <%= image_tag i.photo, size: "160x90", alt: "Profile Picture"%>
-      <div>
+    <div class="user_details d_flex">
+      <%= image_tag i.photo, class: "user_img", size: "160x90", alt: "Profile Picture" %>
+      <div class="user_info d_flex">
         <h1><%= link_to i.name, i %></h1>
         <p>Number of posts: <%= i.post_counter %></p>
       </div>
