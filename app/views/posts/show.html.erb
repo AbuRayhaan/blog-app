@@ -1,12 +1,16 @@
 <div class="post_show">
     <div class="post">
-        <p><%= @post.title %></p>
-        <p><%= @post.comment_counter %></p>
+        <h3><%= @post.title %></h3>
+        <p><%= @post.comment_counter %> comments</p>
     </div>
     <p><%= @post.text %></p>
     <div class="comments">
-        <% @post.comments.each do |comment| %>
-            <p><%= comment.text %> By: <%= comment.user.name %></p>
+        <% if @post.comments.empty? %>
+          <p>0 Comment</p>
+        <% else %>
+          <% @post.comments.each do |comment| %>
+            <p><%= comment.text %> By: <%= comment.author_id %></p>
+          <% end %>
         <% end %>
     </div>
 </div>
