@@ -1,21 +1,21 @@
+<div>
+  <%= render 'partials/user' %>
+</div>
 <div class="post_container d_flex">
   <% @posts.each do |i|%>
     <section class="user_header d_flex">
-      <%= image_tag @user.photo, class: "user_img", size: "160x90", alt: "Profile Picture"%>
-      <div class=" user_info d_flex">
-        <h1><%= link_to @user.name %></h1>
-        <p>Number of posts: <%= @user.post_counter %></p>
-      </div>
-    </section>
-
     <div class="post_details">
       <h3><%= link_to i.title, user_post_path(@user.id, i) %></h3>
       <p><%= i.text %></p>
     </div>
 
     <div>
-      <%= i.comments.limit(3).each do |idx| %>
-        <p><%= idx.text %> By: <%= idx.user.name %></p>
+      <% if i.comments.empty? %>
+        <p>0 Comment</p>
+      <% else %>
+        <%= i.comments.limit(3).each do |idx| %>
+          <p><%= idx.text %> By: <%= idx.author_id %></p>
+        <% end %>
       <% end %>
     </div>
   <% end %>
