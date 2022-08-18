@@ -28,6 +28,7 @@ a {
 }
 
 .user_info {
+  flex-direction: row;
   gap: 35px;
   border: 1px solid black;
   padding: 5px 40px;
