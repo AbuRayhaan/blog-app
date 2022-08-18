@@ -1,12 +1,8 @@
-<div class="show_container d_flex">
-  <section class="user_header d_flex">
-    <%= image_tag @user.photo, class: "user_img", size: "160x90", alt: "Profile Picture"%>
-    <div class=" user_info d_flex">
-      <h1><%= link_to @user.name %></h1>
-      <p>Number of posts: <%= @user.post_counter %></p>
-    </div>
-  </section>
+<div>
+  <%= render 'partials/user' %>
+</div>
 
+<div class="show_container d_flex">
   <section class="user_bio">
     <h3>Bio</h3>
     <p><%= @user.bio %></p>
@@ -15,7 +11,7 @@
   <section class="user_post">
     <% @user.posts.each_with_index do |post, idx|%>
       <div>
-        <h3>Post#<%=idx%>: <%= post.title %> </h3>
+        <h3>Post #<%=idx+1%>: <%= post.title %> </h3>
         <p><%= post.text %></p>
       </div>
     <% end %>
