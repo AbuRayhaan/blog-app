@@ -1,12 +1,18 @@
 <div class="post_show">
     <div class="post">
-        <p><%= @post.title %></p>
-        <p><%= @post.comment_counter %></p>
+        <h3><%= @post.title %></h3>
+        <p>Comments: <%= @post.comment_counter %></p>
+        <p>Likes: <%= @post.likes_counter %></p>
     </div>
     <p><%= @post.text %></p>
+
     <div class="comments">
-        <% @post.comments.each do |comment| %>
-            <p><%= comment.text %> By: <%= comment.user.name %></p>
+        <% if @post.comments.empty? %>
+          <p>0 Comment</p>
+        <% else %>
+          <% @post.comments.each do |idx| %>
+            <p><%= idx.author.name %> : <%= idx.text %></p>
+          <% end %>
         <% end %>
     </div>
 </div>

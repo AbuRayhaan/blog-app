@@ -28,6 +28,7 @@ a {
 }
 
 .user_info {
+  flex-direction: row;
   gap: 35px;
   border: 1px solid black;
   padding: 5px 40px;
@@ -37,7 +38,8 @@ a {
 .user_bio,
 .user_post,
 .post_details,
-.post_show {
+.post_show,
+.post_comment {
   border: 1px solid black;
   width: 29.4%;
   padding-left: 20px;
