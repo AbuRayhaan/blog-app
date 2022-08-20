@@ -6,6 +6,8 @@ class LikesController < ApplicationController
     respond_to do |format|
       if @like.save
         # flash[:success] = 'Like Created'
+      end
       format.html { redirect_to_user_post_path(current_user, @post) }
+    end
   end
 end
