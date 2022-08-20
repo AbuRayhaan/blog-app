@@ -13,9 +13,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.build(post_params)
+    @post = Post.new(post_params)
+    @post.author = current_user
+    @post.comment_counter = 0
+    @post.likes_counter = 0
     if @post.save
-      redirect_to_user_posts_path(current_user)
+      redirect_to user_posts_path(current_user)
       # flash[:success] = 'Post Created'
     else
       render 'new'
