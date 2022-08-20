@@ -1,0 +1,9 @@
+<div>
+  <% if @post.comments.empty? %>
+    <p> 0 Comment </p>
+  <% else %> 
+    <% @post.recent_comments.each do |idx| %>
+        <p><%= idx.author.name %> : <%= idx.text %></p>
+    <% end %>
+  <% end %>
+</div>
