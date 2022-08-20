@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     if @post.save
       redirect_to_user_posts_path(current_user)
-      #flash[:success] = 'Post Created'
+      # flash[:success] = 'Post Created'
     else
       render 'new'
     end

@@ -10,11 +10,11 @@ class CommentsController < ApplicationController
         formt.html { redirect_to_user_post_path(current_user, @post) }
       end
     end
+  end
 
-    private
+  private
 
-    def comment_params
-      params.require(:comment).permit(:text)
-    end
+  def comment_params
+    params.require(:comment).permit(:text)
   end
 end
