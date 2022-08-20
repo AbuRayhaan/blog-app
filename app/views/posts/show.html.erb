@@ -2,17 +2,16 @@
     <div class="post">
         <h3><%= @post.title %></h3>
         <p>Comments: <%= @post.comment_counter %></p>
-        <p>Likes: <%= @post.likes_counter %></p>
+
+        <div class="d_flex likes">
+          <p>Likes: <%= @post.likes_counter %></p>
+          <%= render 'likes/form', locals: { likes: @post.likes.build, post: @post } %>
+        </div>
+        <%= render 'comments/index', locals: { post: @post } %>
     </div>
     <p><%= @post.text %></p>
 
     <div class="comments">
-        <% if @post.comments.empty? %>
-          <p>0 Comment</p>
-        <% else %>
-          <% @post.comments.each do |idx| %>
-            <p><%= idx.author.name %> : <%= idx.text %></p>
-          <% end %>
-        <% end %>
+      <%= render 'comments/form', locals: {comment: @post.comments.build, post: @post} %>
     </div>
 </div>
