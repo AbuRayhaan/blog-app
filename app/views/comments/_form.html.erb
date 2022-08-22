@@ -1,0 +1,6 @@
+<%= form_for @post.comments.build, url: post_comments_path(@post) do |form| %>
+  <div>
+    <%= form.text_area :text, placeholder: 'Please add a comment' %><br>
+    <%= form.submit "Comment" %>
+  </div>
+<% end %>

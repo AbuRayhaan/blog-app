@@ -44,3 +44,14 @@ a {
   width: 29.4%;
   padding-left: 20px;
 }
+
+.likes {
+  align-items: center;
+  gap: 15px;
+}
+
+.new_post {
+  flex-direction: column;
+  gap: 15px;
+  width: 70%;
+}
