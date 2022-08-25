@@ -1,7 +1,5 @@
 require 'rails_helper'
 
-require 'rails_helper'
-
 RSpec.describe User, type: :view do
   before :each do
     @user1 = User.create(name: 'Tom', photo: 'avatal.jpg', bio: 'Teacher from Mexico.')
