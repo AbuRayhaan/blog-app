@@ -18,6 +18,8 @@ To get a local copy up and running follow these simple example steps.
 - run `bundle install` to install dependencies
 - run `rspec` to run the tests.
 
+## Authors
+
 👤 **AbuRayhaan**
 
 - GitHub: [@aburayhaan](https://github.com/AbuRayhaan)
