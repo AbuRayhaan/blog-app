@@ -24,6 +24,13 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@ayinla2011](https://twitter.com/Ayinla2011)
 - LinkedIn: [Hammed Adisa](https://www.linkedin.com/in/hammed-adisa)
 
+👤 **Chia Carlyle**
+
+- GitHub: [@carlylechia](https://github.com/carlylechia)
+- Twitter: [@chiacarlyle](https://twitter.com/chiacarlyle)
+- LinkedIn: [chia-carlyle](https://linkedin.com/in/chia-carlyle)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
