@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'likes/create'
-  get 'comments/new'
-  get 'comments/create'
+  # devise
+  devise_for :users
+
   root 'users#index'
 
   resources :users, only: [:index, :show] do
