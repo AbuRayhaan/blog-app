@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
+  before_action :set_user, only: %i[index show]
+  before_action :authenticate_user!, only: %i[new create]
+
   def index
-    @user = User.find(params[:user_id])
     @posts = @user.posts.includes([:comments])
   end
 
@@ -23,6 +25,10 @@ class PostsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def set_user
+    @user = User.find(params[:user_id])
   end
 
   private

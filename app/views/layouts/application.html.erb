@@ -12,6 +12,11 @@
 
   <body>
     <%= render 'partials/header' %>
+    <div class="flash">
+      <% flash.each do |name, message| %>
+        <div><%=message %></div>
+      <% end %>
+    </div>
     <%= yield %>
     <%= render 'partials/footer' %>
   </body>
