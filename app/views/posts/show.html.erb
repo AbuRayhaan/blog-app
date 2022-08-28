@@ -1,6 +1,9 @@
 <div class="post_show">
     <div class="post">
         <h3><%= @post.title %></h3>
+        <%if can? :manage, @post%>
+          <%=button_to "delete", post_path, method: :delete,  data: {confirm: 'Are You Sure You Want to Delete This Post'}%>
+        <% end %>
         <p>Comments: <%= @post.comment_counter %></p>
 
         <div class="d_flex likes">
