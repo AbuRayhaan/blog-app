@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
@@ -7,7 +5,7 @@ class Ability
     user ||= User.new
 
     can :read, :all
-    
+
     if user.is? :admin
       can :manage, :all
       can :access, :rails_admin
