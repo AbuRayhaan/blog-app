@@ -10,6 +10,12 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :post_counter, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 0 }
 
+  ROLES = %i[admin default].freeze
+
+  def is?(requested_role)
+    ROLES == requested_role.to_s
+  end
+
   # method that returns the 3 most recent posts for a given user
 
   def recent_post
